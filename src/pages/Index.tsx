@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import HeritageCard from "@/components/HeritageCard";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 import tajMahalImg from "@/assets/hero-taj-mahal.jpg";
 import ajantaCavesImg from "@/assets/ajanta-caves.jpg";
@@ -11,6 +12,7 @@ import vedicChantingImg from "@/assets/vedic-chanting.jpg";
 import jointFamilyImg from "@/assets/joint-family.jpg";
 
 const Index = () => {
+  const { t } = useLanguage();
   const heritageItems = [
     {
       title: "The Taj Mahal",
@@ -59,13 +61,10 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-4">
-              Cultural Heritage of{" "}
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                India
-              </span>
+              {t('heritage.title')}
             </h2>
             <p className="text-lg font-inter text-foreground/70 max-w-2xl mx-auto">
-              Explore the timeless traditions and treasures that make India's cultural heritage truly eternal
+              {t('heritage.description')}
             </p>
           </div>
 
@@ -90,10 +89,10 @@ const Index = () => {
             <div className="w-10 h-10 bg-gradient-hero rounded-md flex items-center justify-center">
               <span className="text-background font-bold font-poppins text-lg">भ</span>
             </div>
-            <h3 className="text-2xl font-bold font-poppins">The Eternal Bharat</h3>
+            <h3 className="text-2xl font-bold font-poppins">{t('hero.title')}</h3>
           </div>
           <p className="font-inter text-background/80 mb-6">
-            Preserving and celebrating India's timeless cultural heritage
+            {t('footer.tagline')}
           </p>
           <div className="text-sm font-inter text-background/60">
             © 2025 The Eternal Bharat. All rights reserved.

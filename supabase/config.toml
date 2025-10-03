@@ -1,0 +1,10 @@
+project_id = "lxkyafyasbiirqejozyw"
+
+[functions.text-to-speech]
+verify_jwt = false
+
+[functions.transcribe-audio]
+verify_jwt = false
+
+[functions.translate-text]
+verify_jwt = false
